@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar-track{
+  background: #000;
+}
+
+html::-webkit-scrollbar-thumb{
+  background:  #ff4f5b;
+}
+
+/* Navbar css */
+#navbar {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 4;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .logo {
+  color: #244361;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  color: #244361;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a:hover {
+  background: #ff4f5b;
+}
+nav .menu-btn i {
+  color: #ff4f5b;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+/* Home css */
+#home {
+  margin: 0px 0px 20px 0px;
+}
+.cont1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 67px;
+  text-align: center;
+  align-items: center;
+}
+.cont1 h1 {
+  font-size: 4.5rem;
+  font-weight: 400;
+  color: #244361;
+}
+.cont1 p {
+  font-size: 2rem;
+  color: #244361;
+}
+#img1 {
+  height: 88vh;
+}
+.red {
+  color: #ff4f5b;
+}
+/* About css */
+#about {
+  margin: 20px 0px;
+}
+#about h1 {
+  font-size: 4rem;
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: 400;
+  color: #244361;
+}
+.img2 {
+  height: 79vh;
+  display: inline-block;
+}
+.cont2 {
+  display: flex;
+}
+#about .cont2 .text1 {
+  padding-top: 100px;
+  display: inline;
+}
+.cont2 p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #244361;
+}
+/* Symptoms css*/
+#symptoms {
+  margin: 20px 0px;
+}
+#symptoms h1 {
+  font-size: 4.5rem;
+  text-align: center;
+  font-weight: 400;
+  color: #244361;
+}
+.cont3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+/* Prevention Css */
+#prevention {
+  margin: 20px 0px;
+}
+#prevention h1 {
+  font-size: 4.5rem;
+  text-align: center;
+  font-weight: 400;
+  color: #244361;
+}
+.cont4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+/*Using this box for both symptoms and prevention*/
+.box {
+  width: 301px;
+  color: #244361;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  z-index: 2;
+  flex-direction: column;
+  box-shadow: -1px 1px 25px 0px rgba(0,0,0,0.15);
+  margin: 15px;
+  padding: 10px 10px;
+  text-align: center;
+  transition: 0.4s;
+}
+.box:hover {
+  transform: scale(1.04);
+  box-shadow: -1px 1px 25px 0px rgba(255, 79, 91, 0.4);
+}
+.box img {
+  height: 30vh;
+}
+.box h3 {
+  color: #ff4f5b;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+.box p {
+  font-size: 1.2rem;
+}
+/* Vaccination section */
+#vaccination {
+  margin: 0 0 20px 0;
+}
+#vaccination h1 {
+  font-size: 4.5rem;
+  text-align: center;
+  font-weight: 400;
+  color: #244361;
+}
+.cont5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#img2{
+  height: 50vh;
+}
+.cont5 p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #244361;
+  text-align: center;
+}
+.btn{
+  font-size: 2em;
+  height: 60px;
+  border-radius: 20px;
+  width: 200px;
+}
+/*Media queries*/
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+    background: white;
+  }
+
+  #home #img1 {
+    height: 45vh;
+    margin-top: 10.2vh;
+  }
+}
+@media (max-width: 1143px) {
+  html {
+    font-size: 62.5%;
+  }
+  #about .cont2 .text1 {
+    padding-top: 0px;
+    display: block;
+  }
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    height: 100vh;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a:hover {
+    background: #fff;
+    color: #ff4f5b;
+  }
+  #home .cont1 {
+    flex-direction: column;
+  }
+  #about .cont2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  #about .img2 {
+    height: 50vh;
+  }
+  #about {
+    margin-top: 20px;
+    font-size: 80px;
+  }
+  .cont3 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0px;
+  }
+  .box {
+    height: 400px;
+  }
+  .box img{
+height: 30vh;
+  }
+}
+/* It's the end */
